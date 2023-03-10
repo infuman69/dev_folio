@@ -6,7 +6,8 @@
     "dev": "NEXT_PUBLIC_REPO_STATS_URL='http://localhost:8000/' next dev",
     "build": "NEXT_PUBLIC_REPO_STATS_URL='https://serverless-apis.vercel.app/' next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:windows" : "SeT NEXT_PUBLIC_REPO_STATS_URL='http://localhost:8000/' && next dev"
   },
   "dependencies": {
     "@next/font": "13.1.1",
