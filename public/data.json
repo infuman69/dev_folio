@@ -7,6 +7,20 @@
   "email": "saharoy.soham123@gmail.com",
   "experience": [
     {
+      "title": "Mobile Application Developer",
+      "company": "Microbase Infotech Pvt. Ltd.",
+      "company_url": "https://www.microbaseinfotech.com/",
+      "duration": "July 2023 - Present",
+      "description": "Developing mobile applications for clients using Flutter."
+    },
+    {
+      "title": "SWE Intern",
+      "company": "Buzzli.ai",
+      "company_url": "https://buzzli.in",
+      "duration": "June 2023 - Present",
+      "description": "Building Buzzli's MVP using Next.js and Supabase."
+    },
+    {
       "title": "SDE Intern",
       "company": "Ekko",
       "company_url": "https://ekko.network/",

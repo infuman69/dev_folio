@@ -1,15 +1,15 @@
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import FallInTextEntry from "../components/FallInTextEntry";
-import { HtmlTags } from "../components/HtmlTags";
-import Card from "../components/ProjectCard";
-import { ProjectDataArr } from "../models/DataTypes";
-import { data } from "../repository/DataRepository";
+import FallInTextEntry from "../../components/FallInTextEntry";
+import { HtmlTags } from "../../components/HtmlTags";
+import Card from "../../components/ProjectCard";
+import { ProjectDataArr } from "../../models/DataTypes";
+import { data } from "../../repository/DataRepository";
 import {
   addAnimationClass,
   removeAnimationClass,
-} from "../utils/CommonFunctions";
-import { repoURLs } from "../utils/Constants";
+} from "../../utils/CommonFunctions";
+import { repoURLs } from "../../utils/Constants";
 
 function Projects(): JSX.Element {
   const [projectDataArr, setProjectArr] = useState<ProjectDataArr[]>([
@@ -53,10 +53,17 @@ function Projects(): JSX.Element {
     <>
       <Head>
         <title>{`${data.intro.split(" ")[0]}'s Projects`}</title>
+        <meta name="description" content={`${data.repos.join(", ")}`} />
         <meta
-          name="description"
-          content={`Projects that ${data.intro} has previously worked on`}
+          property="og:title"
+          content={`${data.intro.split(" ")[0]}'s Projects`}
         />
+        <meta property="og:description" content={`${data.repos.join(", ")}`} />
+        <meta
+          property="og:url"
+          content={`${process.env.NEXT_PUBLIC_BASE_URL}projects`}
+        />
+        <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link
